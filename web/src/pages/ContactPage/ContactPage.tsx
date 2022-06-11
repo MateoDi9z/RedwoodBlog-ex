@@ -34,48 +34,54 @@ const ContactPage = () => {
   }
 
   return (
-    <>
+    <div className="page contact">
       <MetaTags title="Contact" description="Contact page" />
 
       <Toaster />
       <Form onSubmit={onSubmit} formMethods={formMethods} error={error}>
-        <FormError error={error} wrapperClassName="form-error" />
-
-        <Label name="name" errorClassName="error">
+        <h1>Contact</h1>
+        <Label name="name" errorClassName="errorlabel" className="label">
           Name
         </Label>
         <TextField
           name="name"
-          errorClassName="error"
+          errorClassName="inputerror"
           validation={{ required: true }}
+          className="input name"
         />
         <FieldError name="name" className="error" />
 
-        <Label name="email" errorClassName="error">
+        <Label name="email" errorClassName="errorlabel" className="label">
           Email
         </Label>
         <TextField
           name="email"
-          errorClassName="error"
+          errorClassName="inputerror"
           validation={{
             required: true,
           }}
+          className="input email"
         />
         <FieldError name="email" className="error" />
 
-        <Label name="message" errorClassName="error">
+        <Label name="message" errorClassName="errorlabel" className="label">
           Message
         </Label>
         <TextAreaField
           name="message"
-          errorClassName="error"
+          errorClassName="inputerror"
           validation={{ required: true }}
+          className="input msg"
         />
         <FieldError name="message" className="error" />
 
-        <Submit disabled={loading}>Send Message</Submit>
+        <FormError error={error} wrapperClassName="form-error" />
+
+        <Submit disabled={loading} className="button1 contactSubmit">
+          Send Message
+        </Submit>
       </Form>
-    </>
+    </div>
   )
 }
 

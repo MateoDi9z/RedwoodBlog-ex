@@ -1,4 +1,29 @@
+:root {
+  --color-lightgreen: #c2e7c9;
+  --color-darkblue: #293855;
+  --color-lightblue: #4265d5;
+  --color-gold: #f2ac20;
+}
+
+.button1 {
+  background: var(--color-lightblue);
+  border: 3px solid var(--color-lightblue);
+  color: #fff;
+  height: 30px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: .2s ease-in;
+}
+.button1:hover {
+  background: var(--color-darkblue);
+  color: #fff;
+  text-decoration: none;
+}
+
 body {
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 ul {
@@ -50,8 +75,141 @@ input.error, textarea.error {
 }
 .navbar{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-darkblue) !important;
+  width: 100%;
+  height: 60px;
 }
 
-.navbar a {
+.navbar a, .navlogin {
   margin-right: 10px;
+  color: #fff!important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .2s ease-in;
+}
+.navbar a:hover {
+  color: var(--color-lightgreen) !important;
+  text-decoration: underline;
+}
+
+.navbar .rightside div {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .rightside .username {
+  color: var(--color-gold)
+}
+
+.navbar .rightside {
+  padding-right: 30px;
+  float: right;
+}
+.navbar .leftside {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+article {
+  background: var(--color-lightgreen);
+  border-radius: 20px;
+  padding: 10px 30px 10px 30px ;
+  margin: 10px;
+  width: fit-content;
+}
+article a {
+  color: var(--color-darkblue) !important;
+  text-decoration: none;
+}
+header h2 {
+  margin: 0 !important;
+}
+
+.maintitle {
+  width: 100%;
+  margin: 0;
+  height: 100px;
+  background: var(--color-darkblue);
+}
+.maintitle h1 {
+  margin: 0 !important;
+  padding: 25px 20px 0 0;
+
+}
+.maintitle h1 a {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 500;
+  padding-left: 20px;
+  margin: 0;
+  text-align: center;
+  transition: .2s ease-in;
+}
+.maintitle h1 a:hover {
+  color: var(--color-lightgreen) !important;
+}
+
+.page {
+  padding: 10px;
+}
+
+.contact .input, .contact .inputerror {
+  border: var(--color-lightblue) solid 2px;
+  border-radius: 10px;
+  height: 20px;
+  width: 95%;
+  margin: auto auto auto 0;
+}
+.contact .inputerror {
+  border: red solid 2px;
+}
+.contact .label {
+  color: var(--color-darkblue);
+  font-weight: 500;
+}
+.contact .msg {
+  height: 60px !important;
+}
+.contact .form-error {
+  width: calc(100% - 30px);
+  margin: 20px auto 0 auto;
+  border-radius: 20px;
+}
+
+.contact .contactSubmit {
+  margin-top: 10px;
+}
+
+.contact {
+  width: 100%;
+}
+.contact form {
+  overflow: hidden;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 20px 20px 20px;
+  border-radius: 20px;
+}
+
+.contact form .label,.errorlabel {
+  color: var(--color-lightblue);
+  padding: 1px;
+}
+.contact form h1 {
+  color: var(--color-lightblue);
+  font-size: 2rem;
+  margin: 10px 0 0 0;
+}
+.contact form hr {
+  border: 1px solid var(--color-lightblue);
+}
+.errorlabel {
+  color: red;
 }

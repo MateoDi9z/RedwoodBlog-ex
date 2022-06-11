@@ -34,6 +34,7 @@ const SignupPage = () => {
     if (response.message) {
       toast(response.message)
     } else if (response.error) {
+      console.log(response, data)
       toast.error(response.error)
     } else {
       // user is signed in automatically
@@ -99,7 +100,9 @@ const SignupPage = () => {
                   <FieldError name="password" className="rw-field-error" />
 
                   <div className="rw-button-group">
-                    <Submit className="rw-button rw-button-blue">Sign Up</Submit>
+                    <Submit className="rw-button rw-button-blue">
+                      Sign Up
+                    </Submit>
                   </div>
                 </Form>
               </div>
